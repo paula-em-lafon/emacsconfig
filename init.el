@@ -31,12 +31,29 @@ Return a list of installed packages or nil for every skipped package."
 (ensure-package-installed
  'helm
  'projectile
+ 'helm-projectile
  'flycheck
+ 'js2-mode
  'magit)
 
 ;; Set helm as default M-x provider
 (helm-mode 1)
+(projectile-mode 1)
 
 ;; Disable backup and autosave files
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("cedd3b4295ac0a41ef48376e16b4745c25fa8e7b4f706173083f16d5792bb379" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:weight normal :height 113 :family "Courier Prime Code")))))
