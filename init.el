@@ -10,9 +10,11 @@
 (require 'my-javascript)
 
 (ensure-package-installed
+ 'whole-line-or-region
  'tronesque-theme)
 
 (load-theme 'tronesque)
+(tronesque-mode-line)
 
 (whole-line-or-region-mode)
 

@@ -17,13 +17,18 @@
  helm-lisp-completion-at-point 't)
 
 ;;; Enable projectile in all buffers
-(projectile-global-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 (helm-projectile-on)
-(setq
- projectile-completion-system 'helm)
+(setq-default
+ projectile-completion-system 'helm
 
 ;; All commands follow symlinks
-(setq-default
  vc-follow-symlinks 't)
+
+(eval-after-load
+ 'helm
+ '(helm-autoresize-mode 1))
+
 
 (provide 'my-projects)
