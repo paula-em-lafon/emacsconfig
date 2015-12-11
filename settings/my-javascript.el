@@ -19,6 +19,11 @@
      js2-mode-show-parse-errors nil
      js2-mode-show-strict-warnings nil)))
 
+(setq-default
+ flycheck-disabled-checkers
+ (append flycheck-disabled-checkers
+	 '(javascript-jshint)))
+
 (eval-after-load
   'flycheck
   '(flycheck-add-mode 'javascript-eslint 'js2-mode))
