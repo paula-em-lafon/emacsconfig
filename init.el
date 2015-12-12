@@ -19,8 +19,10 @@
 (whole-line-or-region-mode)
 
 ;; Disable backup and autosave files
-(setq make-backup-files nil)
-(setq auto-save-default nil)
+(setq-default
+ indent-tabs-mode nil
+ auto-save-default nil
+ make-backup-files nil)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

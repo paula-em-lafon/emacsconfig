@@ -1,15 +1,23 @@
 (ensure-package-installed
- 'flycheck
  'exec-path-from-shell
- 'paredit
+ 'flycheck
+ 'company
+ 'smartparens
  'rainbow-delimiters)
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;; global modes
+(add-hook 'after-init-hook 'global-company-mode)
+(add-hook
+ 'prog-mode-hook
+ (lambda ()
+   (rainbow-delimiters-mode)
+   (turn-on-smartparens-mode)
+   (flycheck-mode)))
 
-;;;; rainbow-delimiters
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(setq-default
+ company-idle-delay 0.1)
 
-;; on OS-X call exec path from shell
+;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
 
 (show-paren-mode 1)

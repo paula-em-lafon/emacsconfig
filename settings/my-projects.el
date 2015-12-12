@@ -17,7 +17,7 @@
  helm-lisp-completion-at-point 't)
 
 ;;; Enable projectile in all buffers
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook 'projectile-global-mode)
 
 (helm-projectile-on)
 (setq-default
