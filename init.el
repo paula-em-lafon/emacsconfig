@@ -21,8 +21,9 @@
 
 (load-theme 'tronesque)
 (tronesque-mode-line)
- 
 (scroll-bar-mode 0)
+(tool-bar-mode 0)
+(menu-bar-mode 0)
 
 (whole-line-or-region-mode)
 
