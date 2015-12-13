@@ -1,6 +1,7 @@
 (ensure-package-installed
  'js2-mode
  'js2-refactor
+ 'smartparens
  'json-mode)
 
 (add-to-list
@@ -25,5 +26,9 @@
      flycheck-disabled-checkers
      (append flycheck-disabled-checkers
 	     '(javascript-jshint)))))
+(add-hook
+ 'prog-mode-hook
+ (lambda ()
+   (turn-on-smartparens-mode)))
 
 (provide 'my-javascript)

@@ -2,7 +2,6 @@
  'exec-path-from-shell
  'flycheck
  'company
- 'smartparens
  'rainbow-delimiters)
 
 ;; global modes
@@ -11,7 +10,6 @@
  'prog-mode-hook
  (lambda ()
    (rainbow-delimiters-mode)
-   (turn-on-smartparens-mode)
    (flycheck-mode)))
 
 (setq-default
