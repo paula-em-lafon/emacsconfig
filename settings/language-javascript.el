@@ -10,9 +10,7 @@
 
 (setq-default
  js-indent-level 2
- js2-basic-offset 2)
-
-(setq-default
+ js2-basic-offset 2
  ;; Supress js2 mode errors
  js2-mode-show-parse-errors nil
  js2-mode-show-strict-warnings)
@@ -26,9 +24,11 @@
      flycheck-disabled-checkers
      (append flycheck-disabled-checkers
 	     '(javascript-jshint)))))
-(add-hook
- 'prog-mode-hook
- (lambda ()
-   (turn-on-smartparens-mode)))
 
-(provide 'my-javascript)
+(add-hook
+ 'js2-mode-hook
+ (lambda ()
+   (smartparens-mode 1)
+   (js2-refactor-mode 1)))
+
+(provide 'language-javascript)

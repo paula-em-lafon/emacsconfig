@@ -16,6 +16,8 @@
  helm-apropos-fuzzy-match 't
  helm-lisp-completion-at-point 't)
 
+(global-set-key (kbd "M-x") 'helm-M-x)
+
 ;;; Enable projectile in all buffers
 (add-hook 'after-init-hook #'projectile-global-mode)
 

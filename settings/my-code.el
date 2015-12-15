@@ -1,19 +1,16 @@
 (ensure-package-installed
  'exec-path-from-shell
  'flycheck
- 'company
+ 'diff-hl
  'rainbow-delimiters)
 
-;; global modes
-(add-hook 'after-init-hook 'global-company-mode)
 (add-hook
  'prog-mode-hook
  (lambda ()
-   (rainbow-delimiters-mode)
-   (flycheck-mode)))
-
-(setq-default
- company-idle-delay 0.1)
+   (rainbow-delimiters-mode 1)
+   (flycheck-mode 1)
+   (diff-hl-mode 1)
+   ))
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
