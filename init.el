@@ -49,7 +49,7 @@
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 
-(whole-line-or-region-mode)
+(whole-line-or-region-mode 1)
 
 ;; Disable backup and autosave files
 (setq-default
