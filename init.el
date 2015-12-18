@@ -13,14 +13,14 @@
  'whole-line-or-region
  'which-key
  'company
+ 'better-defaults
+ 'ido-vertical-mode
  'base16-theme)
 
 ;; Set terminal environment variable to dumb
 (add-hook
  'eshell-mode-hook
- (lambda ()
-   (setenv "TERM" "dumb")))
-
+ '(setenv "TERM" "dumb"))
 
 (defun my-save-all ()
   (interactive)
@@ -30,13 +30,15 @@
  'focus-out-hook
  'my-save-all)
 
+;; Enable global-modes
 (which-key-mode 1)
 (global-company-mode 1)
 (global-hl-line-mode 1)
+(ido-vertical-mode 1)
 
 (add-hook
  'company-mode-hook
- (lambda ()
+ '(lambda ()
    ;; Slightly better autocomplete on tab
    (define-key company-active-map [tab] 'company-complete-common-or-cycle)
    (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)))
@@ -79,3 +81,17 @@
 
 (provide 'init)
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("03e3e79fb2b344e41a7df897818b7969ca51a15a67dc0c30ebbdeb9ea2cd4492" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
