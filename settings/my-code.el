@@ -6,15 +6,17 @@
 
 (add-hook
  'prog-mode-hook
- (lambda ()
-   (rainbow-delimiters-mode 1)
-   (flycheck-mode 1)
-   (diff-hl-mode 1)
-   ))
+ 'my-code-mode-init)
+
+(defun my-code-mode-init ()
+  (rainbow-delimiters-mode 1)
+  (flycheck-mode 1)
+  (diff-hl-mode 1)
+  (whitespace-newline-mode 1)
+  (linum-mode 1)
+  (show-paren-mode 1))
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
-
-(show-paren-mode 1)
 
 (provide 'my-code)
