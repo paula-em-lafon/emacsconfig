@@ -1,5 +1,4 @@
 (ensure-package-installed
- 'exec-path-from-shell
  'flycheck
  'diff-hl
  'rainbow-delimiters)
@@ -15,9 +14,6 @@
   ;; (whitespace-newline-mode 1)
   (linum-mode 1)
   (show-paren-mode 1))
-
-;; I may have some variables set in my shell
-(exec-path-from-shell-initialize)
 
 (provide 'my-code)
 ;;; my-code.el ends here

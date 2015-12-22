@@ -15,7 +15,12 @@
  'company
  'better-defaults
  'ido-vertical-mode
+ 'exec-path-from-shell
  'base16-theme)
+
+;; I may have some variables set in my shell
+(exec-path-from-shell-initialize)
+(exec-path-from-shell-copy-envs '("THEME" "BACKGROUND"))
 
 ;; Set terminal environment variable to dumb
 (add-hook
@@ -35,6 +40,7 @@
 (global-company-mode 1)
 (global-hl-line-mode 1)
 (ido-vertical-mode 1)
+(whole-line-or-region-mode 1)
 
 (add-hook
  'company-mode-hook
@@ -49,11 +55,9 @@
 ;; Transparent emacs yay!
 (set-frame-parameter (selected-frame) 'alpha '(98))
 
-(scroll-bar-mode 0)
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-
-(whole-line-or-region-mode 1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; Disable backup and autosave files
 (setq-default
@@ -69,29 +73,16 @@
 
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
-                    :height '150
+                    :height '130
                     :weight 'normal)
 
+;; Load theme based on terminal theme
 (load-theme
  (intern
   (concat
    (getenv "THEME")
    "-"
-   (getenv "BACKGROUND"))))
+   (getenv "BACKGROUND"))) t)
 
 (provide 'init)
 ;;; init.el ends here
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("03e3e79fb2b344e41a7df897818b7969ca51a15a67dc0c30ebbdeb9ea2cd4492" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
