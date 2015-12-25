@@ -1,4 +1,8 @@
-auto-save-list
-elpa
-session*
-eshell
+/auto-save-list
+/elpa
+/.session
+/eshell
+/places
+/projectile-bookmarks.eld
+/backups
+/ido.last

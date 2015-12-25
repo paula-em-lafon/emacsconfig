@@ -27,10 +27,10 @@
  'eshell-mode-hook
  '(setenv "TERM" "dumb"))
 
+;; Save when focus is lost
 (defun my-save-all ()
   (interactive)
   (save-some-buffers t))
-
 (add-hook
  'focus-out-hook
  'my-save-all)
