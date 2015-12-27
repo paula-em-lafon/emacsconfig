@@ -13,7 +13,7 @@
   (diff-hl-mode 1)
   (linum-mode 1)
   (show-paren-mode 1)
-  (add-hook 'before-save-hook 'delete-trailing-whitespace))
+  (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
 (provide 'my-code)
 ;;; my-code.el ends here
