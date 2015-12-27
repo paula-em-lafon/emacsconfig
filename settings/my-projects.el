@@ -3,6 +3,7 @@
  'helm-ag
  'projectile
  'helm-projectile
+ 'github-browse-file
  'magit)
 
 ;; Helmify everything
@@ -31,6 +32,5 @@
 (eval-after-load
  'helm
  '(helm-autoresize-mode 1))
-
 
 (provide 'my-projects)
