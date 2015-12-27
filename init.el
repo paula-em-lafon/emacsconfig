@@ -5,7 +5,9 @@
 (require 'my-package)
 (require 'my-navigation)
 (require 'my-code)
+(require 'my-engine)
 (require 'my-projects)
+(require 'my-directory)
 (require 'language-javascript)
 (require 'language-lisp)
 
@@ -16,7 +18,9 @@
  'better-defaults
  'ido-vertical-mode
  'exec-path-from-shell
- 'base16-theme)
+ 'base16-theme
+ 'golden-ratio
+ 'restclient)
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
@@ -41,6 +45,7 @@
 (global-hl-line-mode 1)
 (ido-vertical-mode 1)
 (whole-line-or-region-mode 1)
+(golden-ratio-mode 1)
 
 (add-hook
  'company-mode-hook
@@ -48,7 +53,6 @@
    ;; Slightly better autocomplete on tab
    (define-key company-active-map [tab] 'company-complete-common-or-cycle)
    (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)))
-
 (setq-default
  company-idle-delay 0.1)
 
@@ -59,7 +63,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-;; Disable backup and autosave files
 (setq-default
  inhibit-startup-screen t
  indent-tabs-mode nil
