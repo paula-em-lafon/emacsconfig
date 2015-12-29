@@ -13,6 +13,8 @@
   (diff-hl-mode 1)
   (linum-mode 1)
   (show-paren-mode 1)
+  (electric-indent-mode 1)
+  (electric-pair-mode 1)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
 (provide 'my-code)

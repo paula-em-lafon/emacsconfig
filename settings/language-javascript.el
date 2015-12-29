@@ -1,7 +1,6 @@
 (ensure-package-installed
  'js2-mode
  'js2-refactor
- 'smartparens
  'json-mode)
 
 (add-to-list
@@ -28,7 +27,6 @@
 (add-hook
  'js2-mode-hook
  (lambda ()
-   (smartparens-mode 1)
    (js2-refactor-mode 1)))
 
 (provide 'language-javascript)
