@@ -39,13 +39,19 @@
  'focus-out-hook
  'my-save-all)
 
+(defun my-turn-modes (param &rest modes)
+  ;;; Applies the parameter to the specified modes
+  (mapcar '(lambda (mode)
+             (funcall mode param)) modes))
+
 ;; Enable global-modes
-(which-key-mode 1)
-(global-company-mode 1)
-(global-hl-line-mode 1)
-(ido-vertical-mode 1)
-(whole-line-or-region-mode 1)
-(golden-ratio-mode 1)
+(my-turn-modes 1
+ 'which-key-mode
+ 'global-company-mode
+ 'global-hl-line-mode
+ 'ido-vertical-mode
+ 'whole-line-or-region-mode
+ 'golden-ratio-mode)
 
 (add-hook
  'company-mode-hook
@@ -57,11 +63,13 @@
  company-idle-delay 0.1)
 
 ;; Transparent emacs yay!
-(set-frame-parameter (selected-frame) 'alpha '(98))
+(set-frame-parameter (selected-frame) 'alpha '(99))
 
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
+;; Turn off GUI bloat
+(turn-modes 0
+ 'scroll-bar-mode
+ 'tool-bar-mode
+ 'menu-bar-mode)
 
 (setq-default
  inhibit-startup-screen t
@@ -75,17 +83,13 @@
  erc-lurker-threshold-time 14400)
 
 (set-face-attribute 'default nil
-                    :family "Source Code Pro"
+                    :family "Inconsolata"
                     :height '130
                     :weight 'normal)
 
-;; Load theme based on terminal theme
+;; Load theme
 (load-theme
- (intern
-  (concat
-   (getenv "THEME")
-   "-"
-   (getenv "BACKGROUND"))) t)
+ 'base16-atelierdune-dark t)
 
 (provide 'init)
 ;;; init.el ends here
