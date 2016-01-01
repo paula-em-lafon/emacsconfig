@@ -66,7 +66,7 @@
 (set-frame-parameter (selected-frame) 'alpha '(99))
 
 ;; Turn off GUI bloat
-(turn-modes 0
+(my-turn-modes 0
  'scroll-bar-mode
  'tool-bar-mode
  'menu-bar-mode)
