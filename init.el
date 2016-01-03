@@ -84,8 +84,15 @@
  erc-lurker-threshold-time 14400)
 
 (set-face-attribute 'default nil
-                    :family "Inconsolata"
-                    :height '140)
+                    :family "Hack"
+                    :height '110)
+
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region (point-min) (point-max))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
 ;; Load theme
 (load-theme
