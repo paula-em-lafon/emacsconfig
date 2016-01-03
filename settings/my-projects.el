@@ -18,7 +18,7 @@
  helm-lisp-completion-at-point 't)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;;; Enable projectile in all buffers
 (add-hook 'after-init-hook 'projectile-global-mode)
