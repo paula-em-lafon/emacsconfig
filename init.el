@@ -10,6 +10,7 @@
 (require 'my-directory)
 (require 'language-javascript)
 (require 'language-lisp)
+(require 'language-c)
 
 (ensure-package-installed
  'whole-line-or-region
@@ -84,12 +85,11 @@
 
 (set-face-attribute 'default nil
                     :family "Inconsolata"
-                    :height '130
-                    :weight 'normal)
+                    :height '140)
 
 ;; Load theme
 (load-theme
- 'base16-atelierdune-dark t)
+ 'gruvbox t)
 
 (provide 'init)
 ;;; init.el ends here

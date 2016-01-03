@@ -1,6 +1,8 @@
 (ensure-package-installed
  'js2-mode
  'js2-refactor
+ 'tern
+ 'company-tern
  'json-mode)
 
 (add-to-list
@@ -24,9 +26,14 @@
      (append flycheck-disabled-checkers
 	     '(javascript-jshint)))))
 
+(defun my-javascript-mode-hook ()
+  (js2-refactor-mode 1)
+  (tern-mode 1)
+  (add-to-list 'company-backends 'tern-company))
+
 (add-hook
  'js2-mode-hook
- (lambda ()
-   (js2-refactor-mode 1)))
+ 'my-javascript-mode-hook)
 
 (provide 'language-javascript)
+;;; language-javascript.el ends here
