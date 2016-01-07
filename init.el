@@ -17,7 +17,6 @@
  'which-key
  'company
  'better-defaults
- 'ido-vertical-mode
  'exec-path-from-shell
  'base16-theme
  'web-mode
@@ -51,9 +50,7 @@
  'global-auto-revert-mode
  'global-company-mode
  'global-hl-line-mode
-
  'which-key-mode
- 'ido-vertical-mode
  'whole-line-or-region-mode
  'golden-ratio-mode)
 

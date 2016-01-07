@@ -1,10 +1,13 @@
 (ensure-package-installed
+ 'projectile
  'helm
  'helm-ag
- 'projectile
  'helm-projectile
  'github-browse-file
  'magit)
+
+;;; Enable projectile in all buffers
+(add-hook 'after-init-hook 'projectile-global-mode)
 
 ;; Helmify everything
 (helm-mode 1)
@@ -18,10 +21,10 @@
  helm-lisp-completion-at-point 't)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x f") 'helm-find-files)
 
-;;; Enable projectile in all buffers
-(add-hook 'after-init-hook 'projectile-global-mode)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (helm-projectile-on)
 
@@ -29,8 +32,5 @@
  projectile-completion-system 'helm
  vc-follow-symlinks 't)
 
-(eval-after-load
- 'helm
- '(helm-autoresize-mode 1))
-
 (provide 'my-projects)
+;;; my-projects.el ends here
