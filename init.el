@@ -20,6 +20,7 @@
  'ido-vertical-mode
  'exec-path-from-shell
  'base16-theme
+ 'web-mode
  'golden-ratio
  'restclient)
 
@@ -47,9 +48,11 @@
 
 ;; Enable global-modes
 (my-turn-modes 1
- 'which-key-mode
+ 'global-auto-revert-mode
  'global-company-mode
  'global-hl-line-mode
+
+ 'which-key-mode
  'ido-vertical-mode
  'whole-line-or-region-mode
  'golden-ratio-mode)
@@ -85,7 +88,12 @@
 
 (set-face-attribute 'default nil
                     :family "Hack"
-                    :height '110)
+                    :height '145)
+
+;;; Apply web mode for html
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq-default
+ web-mode-markup-indent-offset 2)
 
 ;;; Compile buffer colorization fix
 (ignore-errors
@@ -97,7 +105,7 @@
 
 ;; Load theme
 (load-theme
- 'gruvbox t)
+ 'base16-monokai-dark t)
 
 (provide 'init)
 ;;; init.el ends here
