@@ -61,10 +61,11 @@
    (define-key company-active-map [tab] 'company-complete-common-or-cycle)
    (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)))
 (setq-default
- company-idle-delay 0.1)
+ company-idle-delay 0.1
+ company-minimum-prefix-length 1)
 
 ;; Transparent emacs yay!
-(set-frame-parameter (selected-frame) 'alpha '(99))
+(set-frame-parameter (selected-frame) 'alpha '(98))
 
 ;; Turn off GUI bloat
 (my-turn-modes 0
