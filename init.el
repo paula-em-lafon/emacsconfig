@@ -21,6 +21,8 @@
  'base16-theme
  'web-mode
  'golden-ratio
+ 'yasnippet
+ 'super-save
  'restclient)
 
 ;; I may have some variables set in my shell
@@ -32,13 +34,8 @@
  'eshell-mode-hook
  '(setenv "TERM" "dumb"))
 
-;; Save when focus is lost
-(defun my-save-all ()
-  (interactive)
-  (save-some-buffers t))
-(add-hook
- 'focus-out-hook
- 'my-save-all)
+(require 'super-save)
+(super-save-initialize)
 
 (defun my-turn-modes (param &rest modes)
   ;;; Applies the parameter to the specified modes
@@ -65,7 +62,7 @@
  company-minimum-prefix-length 1)
 
 ;; Transparent emacs yay!
-(set-frame-parameter (selected-frame) 'alpha '(98))
+(set-frame-parameter (selected-frame) 'alpha '(99))
 
 ;; Turn off GUI bloat
 (my-turn-modes 0
@@ -86,7 +83,7 @@
 
 (set-face-attribute 'default nil
                     :family "Hack"
-                    :height '145)
+                    :height '120)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
