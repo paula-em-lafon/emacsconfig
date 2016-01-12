@@ -100,7 +100,7 @@
 
 ;; Load theme
 (load-theme
- 'base16-monokai-dark t)
+ 'leuven t)
 
 (provide 'init)
 ;;; init.el ends here
