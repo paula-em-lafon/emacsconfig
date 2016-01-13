@@ -18,12 +18,14 @@
  'company
  'better-defaults
  'exec-path-from-shell
- 'base16-theme
  'web-mode
- 'golden-ratio
  'yasnippet
  'super-save
- 'restclient)
+ 'restclient
+
+ ;;; Themes
+ 'flatui-theme
+ 'base16-theme)
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
@@ -44,12 +46,11 @@
 
 ;; Enable global-modes
 (my-turn-modes 1
- 'global-auto-revert-mode
- 'global-company-mode
- 'global-hl-line-mode
- 'which-key-mode
- 'whole-line-or-region-mode
- 'golden-ratio-mode)
+               'global-auto-revert-mode
+               'global-company-mode
+               'global-hl-line-mode
+               'which-key-mode
+               'whole-line-or-region-mode)
 
 (add-hook
  'company-mode-hook
@@ -83,7 +84,7 @@
 
 (set-face-attribute 'default nil
                     :family "Hack"
-                    :height '120)
+                    :height '140)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
@@ -100,7 +101,7 @@
 
 ;; Load theme
 (load-theme
- 'leuven t)
+ 'flatui t)
 
 (provide 'init)
 ;;; init.el ends here

@@ -8,13 +8,13 @@
  'my-code-mode-init)
 
 (defun my-code-mode-init ()
-  (rainbow-delimiters-mode 1)
-  (flycheck-mode 1)
-  (diff-hl-mode 1)
-  (linum-mode 1)
-  (show-paren-mode 1)
-  (electric-indent-mode 1)
-  (electric-pair-mode 1)
+  (my-turn-modes 1
+                 'rainbow-delimiters-mode
+                 'flycheck-mode
+                 'diff-hl-mode
+                 'show-paren-mode
+                 'electric-indent-mode
+                 'electric-pair-mode)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
 (provide 'my-code)
