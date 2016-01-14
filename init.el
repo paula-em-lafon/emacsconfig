@@ -25,7 +25,8 @@
 
  ;;; Themes
  'flatui-theme
- 'base16-theme)
+ 'base16-theme
+ 'atom-one-dark-theme)
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
@@ -83,8 +84,8 @@
  erc-lurker-threshold-time 14400)
 
 (set-face-attribute 'default nil
-                    :family "Hack"
-                    :height '140)
+                    :family "Inconsolata"
+                    :height '155)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
@@ -101,7 +102,12 @@
 
 ;; Load theme
 (load-theme
- 'flatui t)
+ 'atom-one-dark t)
+
+(when (eq window-system 'mac)
+  (setq
+   mac-option-modifier 'meta
+   mac-command-modifier 'meta))
 
 (provide 'init)
 ;;; init.el ends here

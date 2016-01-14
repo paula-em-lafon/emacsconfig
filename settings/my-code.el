@@ -9,6 +9,7 @@
 
 (defun my-code-mode-init ()
   (my-turn-modes 1
+                 'linum-mode
                  'rainbow-delimiters-mode
                  'flycheck-mode
                  'diff-hl-mode
