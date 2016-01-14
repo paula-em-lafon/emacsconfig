@@ -2,6 +2,11 @@
  'load-path
  (expand-file-name "settings" user-emacs-directory))
 
+(defun my-turn-modes (param &rest modes)
+  ;;; Applies the parameter to the specified modes
+  (mapcar '(lambda (mode)
+             (funcall mode param)) modes))
+
 (require 'my-package)
 (require 'my-navigation)
 (require 'my-code)
@@ -39,11 +44,6 @@
 
 (require 'super-save)
 (super-save-initialize)
-
-(defun my-turn-modes (param &rest modes)
-  ;;; Applies the parameter to the specified modes
-  (mapcar '(lambda (mode)
-             (funcall mode param)) modes))
 
 ;; Enable global-modes
 (my-turn-modes 1
