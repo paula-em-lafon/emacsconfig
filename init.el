@@ -4,7 +4,7 @@
 
 (defun my-turn-modes (param &rest modes)
   ;;; Applies the parameter to the specified modes
-  (mapcar '(lambda (mode)
+  (mapcar #'(lambda (mode)
              (funcall mode param)) modes))
 
 (require 'my-package)
@@ -35,7 +35,6 @@
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
-(exec-path-from-shell-copy-envs '("THEME" "BACKGROUND"))
 
 ;; Set terminal environment variable to dumb
 (add-hook
@@ -52,6 +51,9 @@
                'global-hl-line-mode
                'which-key-mode
                'whole-line-or-region-mode)
+
+(setq-default
+ which-key-idle-delay 0.2)
 
 (add-hook
  'company-mode-hook
@@ -85,12 +87,13 @@
 
 (set-face-attribute 'default nil
                     :family "Inconsolata"
-                    :height '155)
+                    :height '170)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq-default
- web-mode-markup-indent-offset 2)
+ web-mode-markup-indent-offset 2
+ web-mode-code-indent-offset 2)
 
 ;;; Compile buffer colorization fix
 (ignore-errors
