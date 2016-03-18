@@ -5,7 +5,7 @@
 (defun my-turn-modes (param &rest modes)
   ;;; Applies the parameter to the specified modes
   (mapcar #'(lambda (mode)
-             (funcall mode param)) modes))
+              (funcall mode param)) modes))
 
 (require 'my-package)
 (require 'my-navigation)
@@ -86,8 +86,8 @@
  erc-lurker-threshold-time 14400)
 
 (set-face-attribute 'default nil
-                    :family "Inconsolata"
-                    :height '170)
+                    :family "Fira Mono"
+                    :height '130)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
