@@ -30,16 +30,11 @@
 
  ;;; Themes
  'flatui-theme
- 'base16-theme
+ 'solarized-theme
  'atom-one-dark-theme)
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
-
-;; Set terminal environment variable to dumb
-(add-hook
- 'eshell-mode-hook
- '(setenv "TERM" "dumb"))
 
 (require 'super-save)
 (super-save-initialize)
@@ -66,7 +61,7 @@
  company-minimum-prefix-length 1)
 
 ;; Transparent emacs yay!
-(set-frame-parameter (selected-frame) 'alpha '(99))
+(set-frame-parameter (selected-frame) 'alpha '(100))
 
 ;; Turn off GUI bloat
 (my-turn-modes 0
@@ -87,7 +82,7 @@
 
 (set-face-attribute 'default nil
                     :family "Fira Mono"
-                    :height '130)
+                    :height '140)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
@@ -103,9 +98,21 @@
       (ansi-color-apply-on-region compilation-filter-start (point-max))))
   (add-hook 'compilation-filter-hook 'my-colorize-compilation-buffer))
 
+(defun smart-line-beginning ()
+  "Move point to the beginning of text on the current line; if that is already
+the current position of point, then move it to the beginning of the line."
+  (interactive)
+  (let ((pt (point)))
+    (beginning-of-line-text)
+    (when (eq pt (point))
+      (beginning-of-line))))
+(global-set-key (kbd "C-a") 'smart-line-beginning)
+
+(global-set-key (kbd "<f5>") 'recompile)
+
 ;; Load theme
 (load-theme
- 'atom-one-dark t)
+ 'solarized-light t)
 
 (when (eq window-system 'mac)
   (setq
