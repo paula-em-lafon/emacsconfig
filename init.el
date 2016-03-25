@@ -82,7 +82,7 @@
 
 (set-face-attribute 'default nil
                     :family "Fira Mono"
-                    :height '140)
+                    :height '120)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
@@ -97,18 +97,6 @@
     (when (eq major-mode 'compilation-mode)
       (ansi-color-apply-on-region compilation-filter-start (point-max))))
   (add-hook 'compilation-filter-hook 'my-colorize-compilation-buffer))
-
-(defun smart-line-beginning ()
-  "Move point to the beginning of text on the current line; if that is already
-the current position of point, then move it to the beginning of the line."
-  (interactive)
-  (let ((pt (point)))
-    (beginning-of-line-text)
-    (when (eq pt (point))
-      (beginning-of-line))))
-(global-set-key (kbd "C-a") 'smart-line-beginning)
-
-(global-set-key (kbd "<f5>") 'recompile)
 
 ;; Load theme
 (load-theme

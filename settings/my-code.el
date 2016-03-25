@@ -18,5 +18,7 @@
                  'electric-pair-mode)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace))
 
+(global-set-key (kbd "<f5>") 'recompile)
+
 (provide 'my-code)
 ;;; my-code.el ends here
