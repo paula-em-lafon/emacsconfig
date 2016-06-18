@@ -81,8 +81,8 @@
  erc-lurker-threshold-time 14400)
 
 (set-face-attribute 'default nil
-                    :family "Fira Mono"
-                    :height '120)
+                    :family "Roboto Mono"
+                    :height '150)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
@@ -100,7 +100,7 @@
 
 ;; Load theme
 (load-theme
- 'solarized-light t)
+ 'wombat t)
 
 (when (eq window-system 'mac)
   (setq
