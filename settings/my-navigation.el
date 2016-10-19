@@ -2,7 +2,11 @@
  ;; Navigation
  'ace-jump-mode
  'multiple-cursors
- 'expand-region)
+ 'expand-region
+ 'neotree)
+
+(delete-selection-mode 1)
+(show-paren-mode 1)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)

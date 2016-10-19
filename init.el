@@ -14,6 +14,7 @@
 (require 'my-projects)
 (require 'my-directory)
 (require 'language-javascript)
+(require 'language-python)
 (require 'language-lisp)
 (require 'language-c)
 
@@ -31,11 +32,13 @@
  ;;; Themes
  'flatui-theme
  'solarized-theme
- 'atom-one-dark-theme)
+ 'atom-one-dark-theme
+ 'dracula-theme)
 
 ;; I may have some variables set in my shell
 (exec-path-from-shell-initialize)
 
+(require 'better-defaults)
 (require 'super-save)
 (super-save-initialize)
 
@@ -71,9 +74,10 @@
 
 (setq-default
  inhibit-startup-screen t
- indent-tabs-mode nil
+ tabs-mode t
  auto-save-default nil
- make-backup-files nil)
+
+ make-backup-file nil)
 
 ;; Disable annoying messages in ERC
 (setq-default
@@ -82,13 +86,13 @@
 
 (set-face-attribute 'default nil
                     :family "Roboto Mono"
-                    :height '150)
+                    :height '110)
 
 ;;; Apply web mode for html
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq-default
- web-mode-markup-indent-offset 2
- web-mode-code-indent-offset 2)
+ web-mode-markup-indent-offset 4
+ web-mode-code-indent-offset 4)
 
 ;;; Compile buffer colorization fix
 (ignore-errors
@@ -100,7 +104,7 @@
 
 ;; Load theme
 (load-theme
- 'wombat t)
+ 'dracula t)
 
 (when (eq window-system 'mac)
   (setq

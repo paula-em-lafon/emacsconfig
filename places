@@ -1,0 +1,70 @@
+;;; -*- coding: utf-8 -*-
+(("/home/emi/.emacs.d/"
+  (dired-filename . "/home/emi/.emacs.d/settings"))
+ ("/home/emi/.emacs.d/settings/"
+  (dired-filename . "/home/emi/.emacs.d/settings/language-javascript.el"))
+ ("/home/emi/.emacs.d/settings/language-javascript.el" . 337)
+ ("/home/emi/projects/transalud/transalud/doctors/models.py" . 846)
+ ("/home/emi/projects/transalud/transalud/settings/base.py" . 1156)
+ ("/home/emi/projects/transalud/transalud/addresses/models.py" . 540)
+ ("/home/emi/projects/transalud/transalud/core/db/models/models.py" . 714)
+ ("/home/emi/projects/transalud/transalud/"
+  (dired-filename . "/home/emi/projects/transalud/transalud/doctors"))
+ ("/home/emi/projects/transalud/transalud/doctors/"
+  (dired-filename . "/home/emi/projects/transalud/transalud/doctors/models.py"))
+ ("/home/emi/projects/transalud/transalud/core/db/models/__init__.py" . 109)
+ ("/home/emi/.emacs.d/settings/my-package.el" . 663)
+ ("/home/emi/.emacs.d/init.el" . 1719)
+ ("/home/emi/projects/transalud/LICENSE" . 1104)
+ ("/home/emi/projects/transalud/requirements.txt" . 171)
+ ("/home/emi/projects/transalud/etc/install/install.sh" . 1253)
+ ("/home/emi/projects/transalud/manage.py" . 253)
+ ("/home/emi/projects/transalud/transalud/settings/__init__.py" . 20)
+ ("/home/emi/projects/transalud/transalud/settings/"
+  (dired-filename . "/home/emi/projects/transalud/transalud/settings/base.py"))
+ ("/home/emi/.emacs.d/elpa/dracula-theme-20160826.627/dracula-theme-autoloads.el" . 427)
+ ("/home/emi/.emacs.d/elpa/atom-one-dark-theme-20160914.1337/atom-one-dark-theme-autoloads.el" . 483)
+ ("/home/emi/.emacs.d/elpa/solarized-theme-20161009.838/solarized-theme-autoloads.el" . 931)
+ ("/home/emi/.emacs.d/elpa/flatui-theme-20160618.1827/flatui-theme-autoloads.el" . 455)
+ ("/home/emi/.emacs.d/elpa/restclient-20160801.707/restclient-autoloads.el" . 949)
+ ("/home/emi/.emacs.d/elpa/super-save-20160426.729/super-save-autoloads.el" . 782)
+ ("/home/emi/.emacs.d/elpa/web-mode-20161008.22/web-mode-autoloads.el" . 372)
+ ("/home/emi/.emacs.d/elpa/exec-path-from-shell-20160812.159/exec-path-from-shell-autoloads.el" . 1262)
+ ("/home/emi/projects/"
+  (dired-filename . "/home/emi/projects/transalud"))
+ ("/home/emi/projects/transalud/"
+  (dired-filename . "/home/emi/projects/transalud/."))
+ ("/home/emi/.emacs.d/settings/my-navigation.el" . 27)
+ ("/home/emi/.emacs.d/settings/language-python.el" . 138)
+ ("/home/emi/.emacs.d/elpa/"
+  (dired-filename . "/home/emi/.emacs.d/elpa/ace-jump-mode-20140616.115"))
+ ("/home/emi/.emacs.d/settings/my-code.el" . 537)
+ ("/home/emi/.emacs.d/elpa/archives/melpa/archive-contents" . 22876)
+ ("/home/emi/.emacs.d/elpa/neotree-20160921.1817/neotree-autoloads.el" . 1254)
+ ("/home/emi/.emacs.d/elpa/py-autopep8-20160925.352/py-autopep8-autoloads.el" . 638)
+ ("/home/emi/.emacs.d/elpa/ein-20160923.837/ein-autoloads.el" . 11468)
+ ("/home/emi/.emacs.d/elpa/websocket-20160720.2051/websocket-autoloads.el" . 232)
+ ("/home/emi/.emacs.d/elpa/request-20160822.1659/request-autoloads.el" . 228)
+ ("/home/emi/.emacs.d/elpa/cl-generic-0.3/cl-generic-autoloads.el" . 420)
+ ("/home/emi/.emacs.d/elpa/find-file-in-project-20160909.1355/find-file-in-project-autoloads.el" . 5131)
+ ("/home/emi/.emacs.d/elpa/ivy-20160926.221/ivy-autoloads.el" . 3754)
+ ("/home/emi/.emacs.d/elpa/highlight-indentation-20150307.208/highlight-indentation-autoloads.el" . 947)
+ ("/home/emi/.emacs.d/elpa/pyvenv-20160527.442/pyvenv-autoloads.el" . 1888)
+ ("/home/emi/projects/books/provision/templates/django/settings_base.py" . 804)
+ ("/home/emi/projects/books/src/assets/js/something.js" . 75)
+ ("/home/emi/projects/books/src/assets/js/"
+  (dired-filename . "/home/emi/projects/books/src/assets/js/.."))
+ ("/home/emi/projects/books/src/assets/"
+  (dired-filename . "/home/emi/projects/books/src/assets/.."))
+ ("/home/emi/"
+  (dired-filename . "/home/emi/.emacs.d"))
+ ("/home/emi/projects/books/src/"
+  (dired-filename . "/home/emi/projects/books/src/.."))
+ ("/home/emi/projects/books/"
+  (dired-filename . "/home/emi/projects/books/.."))
+ ("/home/emi/.dmrc" . 26)
+ ("/home/emi/projects/books/src/books/"
+  (dired-filename . "/home/emi/projects/books/src/books/.."))
+ ("/home/emi/.adobe/"
+  (dired-filename . "/home/emi/.adobe/.."))
+ ("/home/emi/.emacs.d/settings/my-projects.el" . 657))

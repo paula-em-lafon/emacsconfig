@@ -22,14 +22,19 @@
     (flycheck-add-mode 'javascript-eslint 'js2-mode)
     ;; Disable jshint
     (setq-default
+ js-indent-level 4
+ js2-basic-offset 4
+ ;; Supress js2 mode errors
+ js2-mode-show-parse-errors nil
+ js2-mode-show-strict-warnings)
      flycheck-disabled-checkers
      (append flycheck-disabled-checkers
-	     '(javascript-jshint)))))
+	     '(javascript-jshint))))
 
 (defun my-javascript-mode-hook ()
   (js2-refactor-mode 1)
   (tern-mode 1)
-  (add-to-list 'company-backends 'tern-company))
+  (add-to-list 'company-backends 'company-tern))
 
 (add-hook
  'js2-mode-hook
